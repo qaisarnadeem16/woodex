@@ -1,0 +1,66 @@
+.App {
+  text-align: center;
+  padding: 0;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+
+.tabs {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  flex-wrap: nowrap;
+  padding: 0 4rem;
+}
+
+.tabs a {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  text-decoration: none;
+  color: black;
+}
+
+.tabs a.active {
+  color: black;
+  /* Change to your preferred active color */
+  font-weight: bold;
+  font-size: 1rem;
+  /* Optional: make the active link bold */
+  border-bottom: 2px solid black;
+  /* Optional: add a bottom border */
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
