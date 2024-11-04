@@ -7,7 +7,8 @@ import useStore from 'Store';
 // Background container for the loading overlay
 const ProgressBarLoadingBackground = styled.div`
 	left: 0;
-	top: 0;
+	/* background: #000; */
+	top: 16%;
 	width: 100%;
 	height: 100%;
 	position: fixed;

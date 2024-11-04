@@ -218,7 +218,9 @@ function App() {
 	return (
 		<>
 			<div className="box">
-				<img src={logo} alt="" width={400} className="" />
+				<a href="https://woodeex.com/" className="">
+					<img src={logo} alt="" width={300} className="" />
+				</a>
 
 				<div className="tabs">
 					{links.map((link, index) => (

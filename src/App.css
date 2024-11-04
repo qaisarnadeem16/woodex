@@ -8,6 +8,10 @@
   pointer-events: none;
 }
 
+.box {
+  z-index: 9999;
+  /* background: black; */
+}
 
 .tabs {
   width: 100%;
