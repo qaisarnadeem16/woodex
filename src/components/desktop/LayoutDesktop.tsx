@@ -9,7 +9,7 @@ export const LayoutDesktopContainer = styled.div`
 	position: relative;
 	display: flex;
 	flex-flow: column;
-	padding: 40px 60px;
+	padding: 20px 40px 40px 40px;
 	@media (max-width: 1024px) {
 		flex-direction: column;
 		padding: 0px;

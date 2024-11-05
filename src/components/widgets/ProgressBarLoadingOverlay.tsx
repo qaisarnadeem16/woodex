@@ -8,7 +8,7 @@ import useStore from 'Store';
 const ProgressBarLoadingBackground = styled.div`
 	left: 0;
 	/* background: #000; */
-	top: 8%;
+	top: 5%;
 	width: 100%;
 	height: 100%;
 	position: fixed;
