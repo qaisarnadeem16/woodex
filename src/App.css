@@ -14,11 +14,11 @@
 }
 
 .tabs {
-  width: 100%;
+  width: 90%;
   display: flex;
   justify-content: end;
   flex-wrap: nowrap;
-  padding: 0 4rem;
+  /* padding: 0 12rem 0 0; */
 }
 
 .tabs a {
