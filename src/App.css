@@ -23,7 +23,15 @@
   padding: 0.5rem 0 0 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1400px) {
+
+  /* Adjust the breakpoint as needed */
+  .tabs {
+    width: 32%;
+  }
+}
+
+@media (max-width: 1000px) {
 
   /* Adjust the breakpoint as needed */
   .tabs {
