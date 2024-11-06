@@ -11,14 +11,32 @@
 .box {
   z-index: 9999;
   /* background: black; */
+  display: flex;
+  justify-content: end;
 }
 
 .tabs {
-  width: 90%;
+  width: 34%;
   display: flex;
-  justify-content: end;
+  justify-content: start;
   flex-wrap: nowrap;
   padding: 0.5rem 0 0 0;
+}
+
+@media (max-width: 768px) {
+
+  /* Adjust the breakpoint as needed */
+  .tabs {
+    width: 100%;
+  }
+}
+
+@media (min-width: 2300px) {
+
+  /* Adjust the breakpoint as needed */
+  .tabs {
+    width: 33%;
+  }
 }
 
 .tabs a {
