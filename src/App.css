@@ -35,7 +35,8 @@
 
   /* Adjust the breakpoint as needed */
   .tabs {
-    width: 33%;
+    width: 35%;
+    /* background: black; */
   }
 }
 
