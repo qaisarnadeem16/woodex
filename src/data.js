@@ -5,12 +5,12 @@ export const links = [
         name: 'Rings',
         label: 'Engagement',
         // href: '?name=Engagement+rings+solitaire&modelCode=9338282213660&currency=USD&ecommerce=preview&qty=1&culture=en-US&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiU2VsbGVyIiwiUGVybUJpdHMiOiIwMTAwMTExMDAxMTAwMTExMTExMTAxIiwidW5pcXVlX25hbWUiOiJ3b29kZWV4Lm15c2hvcGlmeS5jb20tN2I5NzRiOWUtNTU3NS00YWFmLTkwOTMtMmI4ZGQyMTgzZTA1LXUxbHd4NWkzLmxmYyIsIlVzZXJJRCI6IjI1NjYwMCIsIlVzZXJOYW1lIjoid29vZGVleC5teXNob3BpZnkuY29tLTdiOTc0YjllLTU1NzUtNGFhZi05MDkzLTJiOGRkMjE4M2UwNS11MWx3eDVpMy5sZmMiLCJlbWFpbCI6Indvb2RlZXgubXlzaG9waWZ5LmNvbS1kZnlqb2p3NS52NHlAemFrZWtlLmNvbSIsIlVzZXJUeXBlSUQiOiIzIiwiSXNzdWVEYXRlIjoiMzEtMTAtMjAyNCAwOC0yMC0zNVoiLCJVc2VyVmVyc2lvbiI6IjIwMjQxMDMxMDgyMDI2IiwiY2xpZW50SUQiOiIyNjE2MzMiLCJzYWxlc0NoYW5uZWxJRCI6IjEiLCJjdXN0b21lcmNvZGUiOiJjdXN0b21lciIsImFjY2Vzc1R5cGUiOiJTMlMiLCJuYmYiOjE3MzAzNjI4MzUsImV4cCI6MTczMDQ0OTIzNSwiaWF0IjoxNzMwMzYyODM1LCJpc3MiOiJ3d3cuemFrZWtlLmNvbSIsImF1ZCI6Imh0dHBzOi8vd3d3Lnpha2VrZS5jb20ifQ.ntnZy0BF9IkRwQYLalfWdGuHzvJ63lSr-T_sfldwNeQ&fromUrl=1&viewerMode=1&integrationVersion=2'
-        href: 'https://woodeex.com/apps/zakeke/c/engagement-rings-solitaire?locale=en'
+        href: 'https://woodeex.com/pages/customization'
     },
     {
         name: 'Necklaces',
         label: 'Necklaces',
-        href: 'https://woodeex.com/apps/zakeke/c/necklaces-solitaire?locale=en'
+        href: 'https://woodeex.com/pages/necklaces'
         // href: '?name=Necklaces+solitaire&modelCode=9338282377500&currency=USD&ecommerce=preview&qty=1&culture=en-US&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiU2VsbGVyIiwiUGVybUJpdHMiOiIwMTAwMTExMDAxMTAwMTExMTExMTAxIiwidW5pcXVlX25hbWUiOiJ3b29kZWV4Lm15c2hvcGlmeS5jb20tN2I5NzRiOWUtNTU3NS00YWFmLTkwOTMtMmI4ZGQyMTgzZTA1LXUxbHd4NWkzLmxmYyIsIlVzZXJJRCI6IjI1NjYwMCIsIlVzZXJOYW1lIjoid29vZGVleC5teXNob3BpZnkuY29tLTdiOTc0YjllLTU1NzUtNGFhZi05MDkzLTJiOGRkMjE4M2UwNS11MWx3eDVpMy5sZmMiLCJlbWFpbCI6Indvb2RlZXgubXlzaG9waWZ5LmNvbS1kZnlqb2p3NS52NHlAemFrZWtlLmNvbSIsIlVzZXJUeXBlSUQiOiIzIiwiSXNzdWVEYXRlIjoiMzEtMTAtMjAyNCAwNy00MS01MloiLCJVc2VyVmVyc2lvbiI6IjIwMjQxMDMxMDc0MTQ5IiwiY2xpZW50SUQiOiIyNjE2MzMiLCJzYWxlc0NoYW5uZWxJRCI6IjEiLCJjdXN0b21lcmNvZGUiOiJjdXN0b21lciIsImFjY2Vzc1R5cGUiOiJTMlMiLCJuYmYiOjE3MzAzNjA1MTIsImV4cCI6MTczMDQ0NjkxMiwiaWF0IjoxNzMwMzYwNTEyLCJpc3MiOiJ3d3cuemFrZWtlLmNvbSIsImF1ZCI6Imh0dHBzOi8vd3d3Lnpha2VrZS5jb20ifQ.lnay59IbnG4RbWihg7l6VdMYya31nolbFMwaqLH4qDk&fromUrl=1&viewerMode=1&integrationVersion=2'
     },
     {
