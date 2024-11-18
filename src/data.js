@@ -4,13 +4,13 @@ export const links = [
     {
         name: 'Rings',
         label: 'Engagement',
-        href: '/apps/zakeke/c/engagement-rings-solitaire?locale=en'
+        href: 'https://woodeex.com/apps/zakeke/c/engagement-rings-solitaire?locale=en'
         // href: 'https://woodeex.com/apps/zakeke/c/engagement-rings-solitaire?locale=en'
     },
     {
         name: 'Necklaces',
         label: 'Necklaces',
-        href: 'https://woodeex.com/pages/necklaces'
+        href: 'https://woodeex.com/apps/zakeke/c/necklaces-solitaire?locale=en'
     },
     {
         name: 'Bracelets',

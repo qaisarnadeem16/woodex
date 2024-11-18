@@ -224,15 +224,15 @@ function App() {
 
 				<div className="tabs">
 					{links.map((link, index) => (
-						<a
+						<button
 							key={index}
-							href={link.href}
-							rel="noopener noreferrer"
+							onClick={() => (window.location.href = link.href)}
 							className={`${product?.name?.includes(link.label) ? "active" : ""}`}
 						>
 							{link.name}
-						</a>
+						</button>
 					))}
+
 				</div>
 
 			</div>
