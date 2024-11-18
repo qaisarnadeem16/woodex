@@ -224,23 +224,15 @@ function App() {
 
 				<div className="tabs">
 					{links.map((link, index) => (
-						<button
-							onClick={() => {
-								if (window.location.href !== link.href) {
-									window.location.href = link.href;
-								} else {
-									window.location.reload();
-								}
-							}}
-
+						<a
 							key={index}
-							// href={link.href}
-
+							href={link.href}
+							target='_blank'
 							// rel="noopener noreferrer"
-							className={`${product?.name?.includes(link.label) ? "active" : ""}`}
+							className={`${product?.name?.includes(link.label) ? "active" : ""}`} rel="noreferrer"
 						>
 							{link.name}
-						</button>
+						</a>
 					))}
 				</div>
 
