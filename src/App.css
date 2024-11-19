@@ -65,14 +65,14 @@
   /* Optional: add a bottom border */
 }
 
-.knncsi {
+/* .knncsi {
   background: #269b88 !important;
-}
+} */
 
-.jRsPj {
+/* .jRsPj {
   background: #269b88 !important;
   min-width: 200px !important;
-}
+} */
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

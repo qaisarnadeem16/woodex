@@ -63,6 +63,8 @@ const OutOfStockTooltipContent = styled(TooltipContent)`
 // Styled component for the "Add to Cart" button
 const AddToCartButton = styled(Button)`
 	min-width: 200px;
+  background: #269b88 !important;
+
 `;
 
 // FooterDesktop component
@@ -396,7 +398,7 @@ const FooterDesktop = () => {
 								primary
 								onClick={!isAddToCartLoading ? () => handleAddToCart() : () => null}
 							>
-								{isAddToCartLoading && <TailSpin color='#269b88' height='25px' />}
+								{isAddToCartLoading && <TailSpin color='#ffff' height='25px' />}
 								{!isAddToCartLoading && !isOutOfStock && (
 									<span>
 										{isDraftEditor || isEditorMode

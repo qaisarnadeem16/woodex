@@ -371,7 +371,7 @@ const FooterMobile = () => {
 								if (isOutOfStock) openOutOfStockTooltip(addToCartButtonRef.current!, 'top', 'top');
 							}}
 							disabled={disableButtonsByVisibleMessages || isAddToCartLoading || isOutOfStock}
-							backgroundColor='#313c46'
+							backgroundColor='#269b88'
 							onClick={!isAddToCartLoading ? () => handleAddToCart() : () => null}
 						>
 							{!isOutOfStock &&
