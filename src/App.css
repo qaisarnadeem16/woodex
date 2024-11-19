@@ -61,8 +61,17 @@
   font-weight: bold;
   font-size: 1rem;
   /* Optional: make the active link bold */
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #269b88;
   /* Optional: add a bottom border */
+}
+
+.knncsi {
+  background: #269b88 !important;
+}
+
+.jRsPj {
+  background: #269b88 !important;
+  min-width: 200px !important;
 }
 
 @media (prefers-reduced-motion: no-preference) {

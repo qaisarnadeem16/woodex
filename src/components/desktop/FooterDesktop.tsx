@@ -381,7 +381,32 @@ const FooterDesktop = () => {
 								)}
 							</PriceContainer>
 						)}
-
+						{/* Add to cart */}
+						{isBuyVisibleForQuoteRule && !isViewerMode && (
+							<AddToCartButton
+								ref={addToCartButtonRef}
+								onPointerEnter={() => {
+									if (isOutOfStock)
+										openOutOfStockTooltip(addToCartButtonRef.current!, 'top', 'top');
+								}}
+								onPointerLeave={() => {
+									closeOutOfStockTooltip();
+								}}
+								disabled={disableButtonsByVisibleMessages || isAddToCartLoading || isOutOfStock}
+								primary
+								onClick={!isAddToCartLoading ? () => handleAddToCart() : () => null}
+							>
+								{isAddToCartLoading && <TailSpin color='#269b88' height='25px' />}
+								{!isAddToCartLoading && !isOutOfStock && (
+									<span>
+										{isDraftEditor || isEditorMode
+											? T._('Save', 'Composer')
+											: T._('Add to cart', 'Composer')}
+									</span>
+								)}
+								{!isAddToCartLoading && isOutOfStock && <span>{T._('OUT OF STOCK', 'Composer')}</span>}
+							</AddToCartButton>
+						)}
 						{/* PDF preview */}
 						<Button key={'pdf'} onClick={() => handlePdfClick()}>
 							<Icon>
@@ -424,32 +449,7 @@ const FooterDesktop = () => {
 							</Button>
 						)}
 
-						{/* Add to cart */}
-						{isBuyVisibleForQuoteRule && !isViewerMode && (
-							<AddToCartButton
-								ref={addToCartButtonRef}
-								onPointerEnter={() => {
-									if (isOutOfStock)
-										openOutOfStockTooltip(addToCartButtonRef.current!, 'top', 'top');
-								}}
-								onPointerLeave={() => {
-									closeOutOfStockTooltip();
-								}}
-								disabled={disableButtonsByVisibleMessages || isAddToCartLoading || isOutOfStock}
-								primary
-								onClick={!isAddToCartLoading ? () => handleAddToCart() : () => null}
-							>
-								{isAddToCartLoading && <TailSpin color='#FFFFFF' height='25px' />}
-								{!isAddToCartLoading && !isOutOfStock && (
-									<span>
-										{isDraftEditor || isEditorMode
-											? T._('Save', 'Composer')
-											: T._('Add to cart', 'Composer')}
-									</span>
-								)}
-								{!isAddToCartLoading && isOutOfStock && <span>{T._('OUT OF STOCK', 'Composer')}</span>}
-							</AddToCartButton>
-						)}
+
 					</FooterRightElementsContainer>
 
 					{/* Out-of-stock tooltip */}

@@ -205,7 +205,7 @@ export const ViewerContainer = styled.div`
 	}
 `;
 
-export const ZoomInIcon = styled(Icon)<{ $isMobile?: boolean }>`
+export const ZoomInIcon = styled(Icon) <{ $isMobile?: boolean }>`
 	position: absolute;
 	left: 20px;
 	width: 32px;
@@ -222,7 +222,7 @@ export const ZoomInIcon = styled(Icon)<{ $isMobile?: boolean }>`
 	}
 `;
 
-export const ZoomOutIcon = styled(Icon)<{ $isMobile?: boolean }>`
+export const ZoomOutIcon = styled(Icon) <{ $isMobile?: boolean }>`
 	position: absolute;
 	left: 20px;
 	width: 32px;
@@ -239,7 +239,7 @@ export const ZoomOutIcon = styled(Icon)<{ $isMobile?: boolean }>`
 	}
 `;
 
-export const ResetIcon = styled(Icon)<{ $isMobile?: boolean }>`
+export const ResetIcon = styled(Icon) <{ $isMobile?: boolean }>`
 	position: absolute;
 	left: 20px;
 	width: 27px;
@@ -257,7 +257,7 @@ export const ResetIcon = styled(Icon)<{ $isMobile?: boolean }>`
 	}
 `;
 
-export const UndoIcon = styled(Icon)<{ $isMobile?: boolean }>`
+export const UndoIcon = styled(Icon) <{ $isMobile?: boolean }>`
 	position: absolute;
 	left: 20px;
 	width: 27px;
@@ -275,7 +275,7 @@ export const UndoIcon = styled(Icon)<{ $isMobile?: boolean }>`
 	}
 `;
 
-export const RedoIcon = styled(Icon)<{ $isMobile?: boolean }>`
+export const RedoIcon = styled(Icon) <{ $isMobile?: boolean }>`
 	position: absolute;
 	left: 20px;
 	width: 27px;
@@ -367,7 +367,7 @@ export const ArIcon = styled(ArSolid)`
 	}
 `;
 
-export const AiIcon = styled(AISolid)<{ $isArIconVisible?: boolean }>`
+export const AiIcon = styled(AISolid) <{ $isArIconVisible?: boolean }>`
 	width: 32px;
 	height: 32px;
 	cursor: pointer;
@@ -514,7 +514,7 @@ export const FooterMobileContainer = styled.div<{ isQuoteEnable?: boolean }>`
 	${(props) =>
 		props.isQuoteEnable &&
 		`
-	grid-template-columns: repeat(6, 1fr);
+	grid-template-columns: repeat(4, 1fr);
 	grid-template-areas: 'back pdf save share cart quote' 
 	`};
 `;
