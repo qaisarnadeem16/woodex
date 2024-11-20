@@ -504,19 +504,23 @@ export const QuantityContainer = styled.div`
 
 export const FooterMobileContainer = styled.div<{ isQuoteEnable?: boolean }>`
 	height: 70px;
-	display: grid;
-	grid-template-columns: repeat(5, 1fr);
+	display: flex;
+	justify-content: space-between;
+	gap: 2px;
+	width: 100%;
+	flex-wrap: nowrap;
+	/* grid-template-columns: repeat(5, 1fr); */
 	background-color: #fff;
 	font-size: 12px;
 	margin-top: 4px;
 	border-top: 1px #fff solid;
-	grid-template-areas: 'back pdf save share cart';
-	${(props) =>
+	/* grid-template-areas: 'back pdf save share cart'; */
+	/* ${(props) =>
 		props.isQuoteEnable &&
 		`
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-areas: 'back pdf save share cart quote' 
-	`};
+	`}; */
 `;
 
 export const AttributeDescription = styled.p`

@@ -24,17 +24,17 @@ export const Container = styled.div`
 	@media (max-width: 1024px) {
 		flex-direction: column;
 		padding: 0px;
-		height: 100%;
+		height: 90%;
 	}
 	@media (min-width: 1024) {
 		width: 100%;
-		height: 100%;
+		height: 90%;
 	}
 `;
 
 export const Top = styled.div`
 	width: 100%;
-	height: 100%;
+	height: 90%;
 	position: relative;
 	display: grid;
 	grid-template-columns: 1fr 40%;
@@ -216,7 +216,7 @@ function App() {
 	}, [items]);
 	// console.log('dd', product)
 	return (
-		<>
+		<div className='bodyMain'>
 			<div className="box">
 				{/* <a href="https://woodeex.com/" className="">
 					<img src={logo} alt="" width={300} className="" />
@@ -241,7 +241,7 @@ function App() {
 			{(isLoading || isSceneLoading || isAssetsLoading) && <LoadingOverlay />}
 			{delayedLoading && <ProgressBarLoadingOverlay flagStartLoading={flagStartLoading} />}
 			{!isSceneLoading && <TryOnViewer />}
-		</>
+		</div>
 	);
 }
 

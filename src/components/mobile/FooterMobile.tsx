@@ -39,6 +39,61 @@ const FooterMobileIcon = styled.div<{
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	min-width: 70px;
+	border: 1px transparent solid;
+	color: ${(props) => (props.color ? props.color : `#313c46`)};
+	background-color: ${(props) => (props.backgroundColor ? props.backgroundColor : `transparent`)};
+	font-size: 14px;
+	text-transform: uppercase;
+	text-align: center;
+	display: inline-flex;
+	min-height: 38px;
+	border: none;
+	border-right: 3px #f4f4f4 solid;
+	cursor: pointer;
+	flex-direction: column;
+	font-weight: bold !important;
+
+	svg {
+		fill: ${(props) => props.iconColor && `${props.iconColor}`};
+		width: 32px;
+		height: 32px;
+	}
+
+	${(props) => props.isHidden && `visibility:hidden`};
+
+	${(props) =>
+		props.isCart &&
+		`
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;`};
+
+	${(props) =>
+		props.disabled &&
+		`
+      background-color: lightgray;
+      border: 1px solid gray;
+      color: #313c46;
+  `}
+	${(props) => props.gridArea && `grid-area:${props.gridArea}`};
+`;
+
+
+const FooterMobileIcon2 = styled.div<{
+	isHidden?: boolean;
+	color?: string;
+	backgroundColor?: string;
+	iconColor?: string;
+	isCart?: boolean;
+	disabled?: boolean;
+	gridArea?: string;
+}>`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 200px;
 	border: 1px transparent solid;
 	color: ${(props) => (props.color ? props.color : `#313c46`)};
 	background-color: ${(props) => (props.backgroundColor ? props.backgroundColor : `transparent`)};
@@ -335,7 +390,8 @@ const FooterMobile = () => {
 			{!isSceneLoading && (
 				<FooterMobileContainer isQuoteEnable={product?.quoteRule !== null}>
 					<FooterMobileIcon gridArea='back' isHidden={selectedGroupId === null} onClick={handleBackClick}>
-						<AngleLeftSolid />
+						{/* <AngleLeftSolid /> */}
+						Back
 					</FooterMobileIcon>
 
 					{
@@ -344,7 +400,7 @@ const FooterMobile = () => {
 						</FooterMobileIcon>
 					}
 
-					{!isDraftEditor &&
+					{/* {!isDraftEditor &&
 						!isEditorMode &&
 						!isViewerMode &&
 						sellerSettings &&
@@ -352,7 +408,7 @@ const FooterMobile = () => {
 							<FooterMobileIcon gridArea='save' onClick={handleSaveClick}>
 								<SaveSolid />
 							</FooterMobileIcon>
-						)}
+						)} */}
 
 					{!isEditorMode && sellerSettings && sellerSettings.shareType !== 0 && (
 						<FooterMobileIcon gridArea='share' onClick={handleShareClick}>
@@ -361,7 +417,7 @@ const FooterMobile = () => {
 					)}
 
 					{isBuyVisibleForQuoteRule && !isViewerMode && (
-						<FooterMobileIcon
+						<FooterMobileIcon2
 							gridArea='cart'
 							isCart
 							iconColor='white'
@@ -380,6 +436,7 @@ const FooterMobile = () => {
 								(!sellerSettings || !sellerSettings.hidePrice) && (
 									<PriceContainer style={{ fontSize: '18px' }} $isMobile={isMobile}>
 										{priceFormatter.format(price)}
+										{/* $757 */}
 									</PriceContainer>
 								)}
 
@@ -389,9 +446,9 @@ const FooterMobile = () => {
 								!isAddToCartLoading &&
 								(isDraftEditor || isEditorMode ? <SaveSolid /> : <CartSolid />)}
 							{isAddToCartLoading && <TailSpin color='#FFFFFF' height='25px' />}
-						</FooterMobileIcon>
+						</FooterMobileIcon2>
 					)}
-					{product?.quoteRule && !isViewerMode && !isDraftEditor && !isEditorMode && (
+					{/* {product?.quoteRule && !isViewerMode && !isDraftEditor && !isEditorMode && (
 						<FooterMobileIcon
 							gridArea='quote'
 							iconColor='white'
@@ -409,7 +466,7 @@ const FooterMobile = () => {
 							)}
 							{isQuoteLoading && <TailSpin color='#FFFFFF' height='25px' />}
 						</FooterMobileIcon>
-					)}
+					)} */}
 				</FooterMobileContainer>
 			)}
 
