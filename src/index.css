@@ -20,8 +20,17 @@ html,
 
 .bodyMain {
   width: 100%;
-  height: 90vh;
+  height: 80vh;
+  /* Default height for smaller devices */
   background-color: rgb(244, 244, 244);
+}
+
+@media (min-width: 1024px) {
+
+  /* Apply for desktops */
+  .bodyMain {
+    height: 90vh;
+  }
 }
 
 * {

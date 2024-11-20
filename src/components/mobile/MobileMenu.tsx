@@ -27,7 +27,7 @@ export const MobileMenuContainer = styled.div`
 // Styled component for the container of the steps
 export const StepsMobileContainer = styled.div`
 	border-top: 1px #fff solid;
-	height: 45px;
+	height: 40px;
 `;
 
 // Styled component for the container of the price info text
@@ -83,8 +83,8 @@ const MobileMenu = () => {
 	const currentTemplateGroups = selectedStep
 		? selectedStep.templateGroups
 		: selectedGroup
-		? selectedGroup.templateGroups
-		: [];
+			? selectedGroup.templateGroups
+			: [];
 
 	const currentItems = [...currentAttributes, ...currentTemplateGroups].sort(
 		(a, b) => a.displayOrder - b.displayOrder
@@ -190,7 +190,7 @@ const MobileMenu = () => {
 
 		try {
 			if ((window as any).algho) (window as any).algho.sendUserStopForm(true);
-		} catch (e) {}
+		} catch (e) { }
 	};
 
 	const setTemplateByID = async (templateID: number) => await setTemplate(templateID);

@@ -14,9 +14,9 @@ export const MobileItemContainer = styled.div<{ selected?: boolean }>`
 	min-width: 140px;
 	max-width: 140px;
 	width: 140px;
-	height: 140px;
-	min-height: 140px;
-	max-height: 140px;
+	height: 120px;
+	min-height: 120px;
+	max-height: 120px;
 	flex: 1;
 	display: flex;
 	flex-direction: column;
@@ -27,8 +27,8 @@ export const MobileItemContainer = styled.div<{ selected?: boolean }>`
 
 // Styled component for the image of each menu item
 export const MenuItemImage = styled.img<{ isRound?: boolean }>`
-	width: 64px;
-	height: 64px;
+	width: 54px;
+	height: 54px;
 	object-fit: ${(props) => (props.isRound ? 'cover' : 'contain')};
 	margin-bottom: 20px;
 	border-radius: ${(props) => (props.isRound ? '64px!important' : '0')};
@@ -134,7 +134,7 @@ interface MenuItemProps {
 const MenuItemsWrapper = styled.div`
 	display: flex;
 	max-width: 100%;
-	min-height: 141px;
+	min-height: 121px;
 	width: 100%;
 	overflow-x: auto;
 	background-color: #ffffff;
@@ -155,7 +155,7 @@ const MenuItemsWrapper = styled.div`
 const ArrowCss = css`
 	position: absolute;
 	left: 10px;
-	bottom: 60px;
+	bottom: 50px;
 	background-color: #f1f1f1;
 	border-radius: 30px;
 	width: 32px;
