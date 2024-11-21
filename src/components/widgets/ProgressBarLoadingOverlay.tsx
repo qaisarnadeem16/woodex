@@ -18,6 +18,7 @@ const ProgressBarLoadingBackground = styled.div`
 	z-index: 12;
 `;
 
+
 // Container for the loading progress bar
 const ProgressBarLoadingContainer = styled.div<{ $isMobile?: boolean }>`
 	${(props) => (props.$isMobile ? `width: 300px` : `width: 650px`)};
