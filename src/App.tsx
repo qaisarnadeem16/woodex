@@ -76,7 +76,6 @@ function App() {
 		setItemText,
 		visibleEventMessages
 	} = useZakeke();
-
 	const {
 		isLoading,
 		setPriceFormatter,
@@ -223,18 +222,24 @@ function App() {
 				</a> */}
 
 				<div className="tabs">
-					{links.map((link, index) => (
-						<a
-							key={index}
-							href={link.href}
-							target='_blank'
-							// rel="noopener noreferrer"
-							className={`${product?.name?.includes(link.label) ? "active" : ""}`} rel="noreferrer"
-						>
-							{link.name}
-						</a>
-					))}
-				</div>
+					{links.map((link) => {
+						const isActive = product?.name?.includes(link.label);
+						const translatedName = translations?.dynamics?.get(link.name) || link.name;
+
+						return (
+							<a
+								key={link.href} // Use a unique property as the key
+								href={link.href}
+								target="_blank"
+								rel="noopener noreferrer"
+								className={isActive ? "active" : ""}
+								aria-current={isActive ? "page" : undefined} // Optional for accessibility
+							>
+								{translatedName}
+							</a>
+						);
+					})}
+				</div>;
 
 			</div>
 			{isMobile ? <LayoutMobile /> : <LayoutDesktop />}
