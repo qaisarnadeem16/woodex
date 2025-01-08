@@ -103,27 +103,27 @@ const Viewer3D = () => {
 		if (IS_ANDROID || IS_IOS) {
 			setIsLoading(true);
 			const link = new URL(arOnFlyUrl, window.location.href);
-			const url = await getMobileArUrl(link.href);
+			// const url = await getMobileArUrl(link.href);
 			setIsLoading(false);
-			if (url)
-				if (IS_IOS) {
-					openArMobile(url as string);
-				} else if (IS_ANDROID) {
-					showDialog(
-						'open-ar',
-						<Dialog>
-							<Button
-								style={{ display: 'block', width: '100%' }}
-								onClick={() => {
-									closeDialog('open-ar');
-									openArMobile(url as string);
-								}}
-							>
-								{T._('See your product in AR', 'Composer')}
-							</Button>
-						</Dialog>
-					);
-				}
+			// if (url)
+			// 	if (IS_IOS) {
+			// 		openArMobile(url as string);
+			// 	} else if (IS_ANDROID) {
+			// 		showDialog(
+			// 			'open-ar',
+			// 			<Dialog>
+			// 				<Button
+			// 					style={{ display: 'block', width: '100%' }}
+			// 					onClick={() => {
+			// 						closeDialog('open-ar');
+			// 						openArMobile(url as string);
+			// 					}}
+			// 				>
+			// 					{T._('See your product in AR', 'Composer')}
+			// 				</Button>
+			// 			</Dialog>
+			// 		);
+			// 	}
 		} else {
 			showDialog('select-ar', <ArDeviceSelectionDialog />);
 		}
