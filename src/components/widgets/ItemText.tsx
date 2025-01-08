@@ -153,7 +153,7 @@ const ItemText: FC<{
 	inDialog?: boolean;
 	hideRemoveButton?: boolean;
 }> = ({ item, handleItemPropChange, inDialog, hideRemoveButton }) => {
-	const { removeItem, fonts, textColors, getPrintingMethodsRestrictions, getSanitationText } =
+	const { removeItem, fonts, getPrintingMethodsRestrictions, getSanitationText } =
 		useZakeke();
 
 	const constraints = item.constraints;
