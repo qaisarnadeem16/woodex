@@ -153,7 +153,7 @@ const ItemText: FC<{
 	inDialog?: boolean;
 	hideRemoveButton?: boolean;
 }> = ({ item, handleItemPropChange, inDialog, hideRemoveButton }) => {
-	const { removeItem, fonts, disableTextColors, textColors, getPrintingMethodsRestrictions, getSanitationText } =
+	const { removeItem, fonts, textColors, getPrintingMethodsRestrictions, getSanitationText } =
 		useZakeke();
 
 	const constraints = item.constraints;
@@ -181,9 +181,9 @@ const ItemText: FC<{
 			const sanitizationInfo = currentFont
 				? getSanitationText(currentFont, value)
 				: {
-						sanitizedText: value,
-						dirtyChars: []
-				  };
+					sanitizedText: value,
+					dirtyChars: []
+				};
 			setDirtyCharInserted(sanitizationInfo.dirtyChars);
 			const text = sanitizationInfo.sanitizedText;
 
@@ -230,8 +230,7 @@ const ItemText: FC<{
 					{dirtyCharInserted.length > 0 && currentFont && (
 						<div style={{ color: 'red' }}>
 							{T._(
-								`The following characters have been removed as they are not supported by the font ${
-									currentFont.name
+								`The following characters have been removed as they are not supported by the font ${currentFont.name
 								}: ${wrapperJoin(dirtyCharInserted, ',', '"', '"')}`,
 								'Composer'
 							)}{' '}
@@ -249,10 +248,10 @@ const ItemText: FC<{
 								}}
 								styles={{
 									container: (base) =>
-										({
-											...base,
-											width: 200
-										} as CSSObjectWithLabel)
+									({
+										...base,
+										width: 200
+									} as CSSObjectWithLabel)
 								}}
 								isSearchable={false}
 								options={fonts}
@@ -273,58 +272,58 @@ const ItemText: FC<{
 					{(textRestrictions.allowedBold ||
 						textRestrictions.allowedItalic ||
 						textRestrictions.allowedCurved) && (
-						<TextButtonsContainer>
-							{(!constraints || constraints.canChangeFontWeight) &&
-								(textRestrictions.allowedBold || textRestrictions.allowedItalic) && (
-									<FormControl label={T._('Style', 'Composer')}>
-										<Columns
-											columns={
-												textRestrictions.allowedBold && textRestrictions.allowedItalic ? 2 : 1
-											}
+							<TextButtonsContainer>
+								{(!constraints || constraints.canChangeFontWeight) &&
+									(textRestrictions.allowedBold || textRestrictions.allowedItalic) && (
+										<FormControl label={T._('Style', 'Composer')}>
+											<Columns
+												columns={
+													textRestrictions.allowedBold && textRestrictions.allowedItalic ? 2 : 1
+												}
+											>
+												{textRestrictions.allowedBold && (
+													<Button
+														outline
+														selected={isBold}
+														onClick={() => handleItemPropChange(item, 'font-bold', !isBold)}
+													>
+														<Icon>
+															<BoldIcon />
+														</Icon>
+													</Button>
+												)}
+												{textRestrictions.allowedItalic && (
+													<Button
+														outline
+														selected={isItalic}
+														onClick={() => handleItemPropChange(item, 'font-italic', !isItalic)}
+													>
+														<Icon>
+															<ItalicSolid />
+														</Icon>
+													</Button>
+												)}
+											</Columns>
+										</FormControl>
+									)}
+								{(!constraints || constraints.canChangeTextPathMode) && textRestrictions.allowedCurved && (
+									<FormControl label={T._('Curved', 'Composer')}>
+										<Button
+											outline
+											selected={hasCurvedText}
+											onClick={() => handleItemPropChange(item, 'text-path', !hasCurvedText)}
 										>
-											{textRestrictions.allowedBold && (
-												<Button
-													outline
-													selected={isBold}
-													onClick={() => handleItemPropChange(item, 'font-bold', !isBold)}
-												>
-													<Icon>
-														<BoldIcon />
-													</Icon>
-												</Button>
-											)}
-											{textRestrictions.allowedItalic && (
-												<Button
-													outline
-													selected={isItalic}
-													onClick={() => handleItemPropChange(item, 'font-italic', !isItalic)}
-												>
-													<Icon>
-														<ItalicSolid />
-													</Icon>
-												</Button>
-											)}
-										</Columns>
+											<Icon>
+												<CurveIcon />
+											</Icon>
+										</Button>
 									</FormControl>
 								)}
-							{(!constraints || constraints.canChangeTextPathMode) && textRestrictions.allowedCurved && (
-								<FormControl label={T._('Curved', 'Composer')}>
-									<Button
-										outline
-										selected={hasCurvedText}
-										onClick={() => handleItemPropChange(item, 'text-path', !hasCurvedText)}
-									>
-										<Icon>
-											<CurveIcon />
-										</Icon>
-									</Button>
-								</FormControl>
-							)}
-						</TextButtonsContainer>
-					)}
+							</TextButtonsContainer>
+						)}
 				</TextToolsContainer>
 
-				{(!disableTextColors || !(disableTextColors && textColors.length === 1)) &&
+				{/* {(!disableTextColors || !(disableTextColors && textColors.length === 1)) &&
 					!!item.constraints?.canChangeFontColor && (
 						<FormControl label={T._('Color', 'Composer')}>
 							<ColorsContainer>
@@ -374,7 +373,7 @@ const ItemText: FC<{
 								)}
 							</ColorsContainer>
 						</FormControl>
-					)}
+					)} */}
 			</ItemTextContainer>
 		);
 	else return null;
