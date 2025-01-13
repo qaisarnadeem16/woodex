@@ -76,7 +76,7 @@ const OptIconContainer = styled.div`
 const OptionItem: FC<{ selectedAttribute: Attribute | null | undefined, option: Option, hasDescriptionIcon: boolean }> = ({ selectedAttribute, option, hasDescriptionIcon }) => {
 
     const selectedOptionId: number | null = selectedAttribute?.options.find(opt => opt.selected)?.id ?? null;
-
+    console.log('s', selectedAttribute)
     const { selectOption } = useZakeke();
     const undoRegistering = useUndoRegister();
     const undoRedoActions = useUndoRedoActions();
@@ -106,12 +106,19 @@ const OptionItem: FC<{ selectedAttribute: Attribute | null | undefined, option: 
             {option.description && option.description.length !== 0 &&
                 <Tooltip key={"tooltip" + option.guid} optionDescription={option.description} />
             }
-            {option.imageUrl && <OptIconContainer><OptionIcon loading="lazy" 
-            // fetchpriority="low" 
-            src={option.imageUrl ?? ""} optionShape={option.attribute.optionShapeType === 2} /></OptIconContainer>}
+            {option.imageUrl && <OptIconContainer><OptionIcon loading="lazy"
+                // fetchpriority="low" 
+                src={option.imageUrl ?? ""} optionShape={option.attribute.optionShapeType === 2} /></OptIconContainer>}
         </OptionIconContainer>
 
-        {!option.attribute.hideOptionsLabel && <OptionName >{T._d(option.name)}</OptionName>}
+        {!option.attribute.hideOptionsLabel &&
+            selectedAttribute &&
+            selectedAttribute.name !== "CARAT" &&
+            selectedAttribute.name !== "QUALITY" && (
+                <OptionName>{T._d(option.name)}</OptionName>
+            )}
+
+
     </OptionContainer>;
 }
 
