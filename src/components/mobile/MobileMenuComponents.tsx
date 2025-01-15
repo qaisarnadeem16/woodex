@@ -27,8 +27,8 @@ export const MobileItemContainer = styled.div<{ selected?: boolean }>`
 
 // Styled component for the image of each menu item
 export const MenuItemImage = styled.img<{ isRound?: boolean }>`
-	width: 54px;
-	height: 54px;
+	width: 74px;
+	height: 74px;
 	object-fit: ${(props) => (props.isRound ? 'cover' : 'contain')};
 	margin-bottom: 20px;
 	border-radius: ${(props) => (props.isRound ? '64px!important' : '0')};
@@ -44,8 +44,8 @@ export const MenuItemImagesWrapper = styled.div`
 
 // Styled component for each image wrapper in the menu item
 export const MenuItemImagesImageWrapper = styled.div`
-	width: 35px;
-	height: 35px;
+	width: 45px;
+	height: 45px;
 	&:nth-child(1) {
 		border-right: 1px #ddd dotted;
 		border-bottom: 1px #ddd dotted;
@@ -65,7 +65,7 @@ export const MenuItemLabel = styled.span`
 	font-size: 14px;
 	font-weight: 500;
 	position: absolute;
-	bottom: 20px;
+	bottom: 10px;
 	left: 0;
 	right: 0;
 	text-align: center;

@@ -303,36 +303,38 @@ const FooterMobile = () => {
 		}
 	};
 	const handleBackClick = () => {
-		if (selectedAttributeId) {
-			setSelectedAttributeId(null);
+		setSelectedGroupId(null);
 
-			const selectedCurrentGroup = groups.find((x) => x.id === selectedGroupId);
-			const selectedCurrentStep = selectedCurrentGroup?.steps.find((x) => x.id === selectedStepId);
+		// if (selectedAttributeId) {
+		// 	setSelectedAttributeId(null);
 
-			if (
-				selectedCurrentGroup &&
-				((selectedCurrentGroup.attributes.length === 1 && selectedCurrentGroup.templateGroups.length === 0) ||
-					(selectedCurrentStep?.attributes.length === 1 && selectedCurrentStep.templateGroups.length === 0))
-			) {
-				setSelectedGroupId(null);
-			}
-		} else if (selectedTemplateGroupId) {
-			console.log('selectedTemplateGroupId');
-			setSelectedTemplateGroupId(null);
+		// 	const selectedCurrentGroup = groups.find((x) => x.id === selectedGroupId);
+		// 	const selectedCurrentStep = selectedCurrentGroup?.steps.find((x) => x.id === selectedStepId);
 
-			const selectedCurrentGroup = groups.find((x) => x.id === selectedGroupId);
-			const selectedCurrentStep = selectedCurrentGroup?.steps.find((x) => x.id === selectedStepId);
+		// 	if (
+		// 		selectedCurrentGroup &&
+		// 		((selectedCurrentGroup.attributes.length === 1 && selectedCurrentGroup.templateGroups.length === 0) ||
+		// 			(selectedCurrentStep?.attributes.length === 1 && selectedCurrentStep.templateGroups.length === 0))
+		// 	) {
+		// 		setSelectedGroupId(null);
+		// 	}
+		// } else if (selectedTemplateGroupId) {
+		// 	console.log('selectedTemplateGroupId');
+		// 	setSelectedTemplateGroupId(null);
 
-			if (
-				selectedCurrentGroup &&
-				((selectedCurrentGroup.templateGroups.length === 1 && selectedCurrentGroup.attributes.length === 0) ||
-					(selectedCurrentStep?.templateGroups.length === 1 && selectedCurrentStep.attributes.length === 0))
-			) {
-				setSelectedGroupId(null);
-			}
-		} else if (selectedGroupId) {
-			setSelectedGroupId(null);
-		}
+		// 	const selectedCurrentGroup = groups.find((x) => x.id === selectedGroupId);
+		// 	const selectedCurrentStep = selectedCurrentGroup?.steps.find((x) => x.id === selectedStepId);
+
+		// 	if (
+		// 		selectedCurrentGroup &&
+		// 		((selectedCurrentGroup.templateGroups.length === 1 && selectedCurrentGroup.attributes.length === 0) ||
+		// 			(selectedCurrentStep?.templateGroups.length === 1 && selectedCurrentStep.attributes.length === 0))
+		// 	) {
+		// 		setSelectedGroupId(null);
+		// 	}
+		// } else if (selectedGroupId) {
+		// 	setSelectedGroupId(null);
+		// }
 	};
 
 	const handleSubmitRequestQuote = async (formData: any) => {
