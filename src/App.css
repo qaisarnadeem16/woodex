@@ -35,6 +35,7 @@
 
   /* Adjust the breakpoint as needed */
   .tabs {
+    padding: 1rem;
     width: 100%;
   }
 }
@@ -43,7 +44,7 @@
 
   /* Adjust the breakpoint as needed */
   .tabs {
-    width: 35%;
+    width: 34%;
     /* background: black; */
   }
 }
