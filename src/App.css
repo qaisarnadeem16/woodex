@@ -16,7 +16,7 @@
 }
 
 .tabs {
-  width: 32%;
+  width: 40%;
   display: flex;
   justify-content: start;
   flex-wrap: nowrap;
@@ -27,7 +27,7 @@
 
   /* Adjust the breakpoint as needed */
   .tabs {
-    width: 32%;
+    width: 40%;
   }
 }
 
@@ -55,6 +55,9 @@
   font-size: 1rem;
   text-decoration: none;
   color: black;
+}
+.tabs a:hover {
+  color: #269b88;
 }
 
 .tabs a.active {

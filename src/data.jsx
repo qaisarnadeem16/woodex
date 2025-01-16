@@ -2,6 +2,12 @@
 
 export const links = [
     {
+        name: 'How it Works',
+        label: 'How it Works',
+        href: '/'
+        // href: 'https://woodeex.com/apps/zakeke/c/engagement-rings-solitaire?locale=en'
+    },
+    {
         name: 'Rings',
         label: 'Engagement',
         href: 'https://woodeex.com/apps/zakeke/c/engagement-rings-solitaire?locale=en'
