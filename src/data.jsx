@@ -4,7 +4,7 @@ export const links = [
     {
         name: 'How it Works',
         label: 'How it Works',
-        href: '/pages/create-your-own-jewel'
+        href: 'https://woodeex.com/pages/create-your-own-jewel'
         // href: 'https://woodeex.com/apps/zakeke/c/engagement-rings-solitaire?locale=en'
     },
     {
