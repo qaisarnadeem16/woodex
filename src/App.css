@@ -22,6 +22,27 @@
   flex-wrap: wrap;
   padding: 0.5rem 0 0 0;
 }
+.tabs a {
+  padding: 0.5rem 1rem 0.5rem 0;
+  margin: 0 0.5rem 0 0;
+  font-size: 1rem;
+  text-decoration: none;
+  color: black;
+}
+
+.tabs a:hover {
+  color: #269b88;
+}
+
+.tabs a.active {
+  color: black;
+  /* Change to your preferred active color */
+  font-weight: bold;
+  font-size: 1rem;
+  /* Optional: make the active link bold */
+  border-bottom: 2px solid #269b88;
+  /* Optional: add a bottom border */
+}
 
 @media (max-width: 1400px) {
 
@@ -32,7 +53,13 @@
 }
 
 @media (max-width: 1000px) {
-
+.tabs a {
+    padding: .5rem;
+    margin: 0;
+    font-size: .9rem;
+    text-decoration: none;
+    color: black;
+  }
   /* Adjust the breakpoint as needed */
   .tabs {
     padding: 1rem;
@@ -49,26 +76,7 @@
   }
 }
 
-.tabs a {
-  padding: 0.5rem 1rem 0.5rem 0;
-  margin: 0 0.5rem 0 0;
-  font-size: 1rem;
-  text-decoration: none;
-  color: black;
-}
-.tabs a:hover {
-  color: #269b88;
-}
 
-.tabs a.active {
-  color: black;
-  /* Change to your preferred active color */
-  font-weight: bold;
-  font-size: 1rem;
-  /* Optional: make the active link bold */
-  border-bottom: 2px solid #269b88;
-  /* Optional: add a bottom border */
-}
 
 /* .knncsi {
   background: #269b88 !important;
