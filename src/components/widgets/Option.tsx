@@ -76,7 +76,7 @@ const OptIconContainer = styled.div`
 const OptionItem: FC<{ selectedAttribute: Attribute | null | undefined, option: Option, hasDescriptionIcon: boolean }> = ({ selectedAttribute, option, hasDescriptionIcon }) => {
 
     const selectedOptionId: number | null = selectedAttribute?.options.find(opt => opt.selected)?.id ?? null;
-    console.log('s', selectedAttribute)
+    // console.log('s', selectedAttribute)
     const { selectOption } = useZakeke();
     const undoRegistering = useUndoRegister();
     const undoRedoActions = useUndoRedoActions();
@@ -95,7 +95,7 @@ const OptionItem: FC<{ selectedAttribute: Attribute | null | undefined, option: 
                 (window as any).algho.sendUserStopForm(true);
         } catch (e) { }
     }
-    console.log('selectedAttribute', selectedAttribute)
+    // console.log('selectedAttribute', selectedAttribute)
     return <OptionContainer
         hasDescriptionIcon={hasDescriptionIcon}
         selected={option.selected}
@@ -114,10 +114,10 @@ const OptionItem: FC<{ selectedAttribute: Attribute | null | undefined, option: 
         {!option.attribute.hideOptionsLabel &&
             selectedAttribute &&
             // selectedAttribute.name !== "CARAT" &&
-            selectedAttribute.name !== "QUALITY" &&
-             (
+            !["QUALITY", "QUALITÉ", "איכות"].includes(selectedAttribute.name) && (
                 <OptionName>{T._d(option.name)}</OptionName>
             )}
+
 
 
     </OptionContainer>;
