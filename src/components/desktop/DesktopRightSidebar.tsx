@@ -407,7 +407,7 @@ const DesktopRightSidebar = () => {
 
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [isStartRegistering]);
-
+	console.log("selectedAttribute", selectedAttribute)
 	return (
 		<DesktopRightSidebarContainer>
 			<GroupsContainer>

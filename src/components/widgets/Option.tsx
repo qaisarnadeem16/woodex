@@ -95,7 +95,7 @@ const OptionItem: FC<{ selectedAttribute: Attribute | null | undefined, option: 
                 (window as any).algho.sendUserStopForm(true);
         } catch (e) { }
     }
-
+    console.log('selectedAttribute', selectedAttribute)
     return <OptionContainer
         hasDescriptionIcon={hasDescriptionIcon}
         selected={option.selected}
@@ -114,7 +114,7 @@ const OptionItem: FC<{ selectedAttribute: Attribute | null | undefined, option: 
         {!option.attribute.hideOptionsLabel &&
             selectedAttribute &&
             // selectedAttribute.name !== "CARAT" &&
-            // selectedAttribute.name !== "QUALITY" &&
+            selectedAttribute.name !== "QUALITY" &&
              (
                 <OptionName>{T._d(option.name)}</OptionName>
             )}
