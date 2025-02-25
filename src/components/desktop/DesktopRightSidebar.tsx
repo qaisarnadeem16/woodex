@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/iframe-has-title */
 import { Attribute, Step, ThemeTemplateGroup } from '@zakeke/zakeke-configurator-react';
 import { ReactComponent as AngleLeftSolid } from '../../assets/icons/angle-left-solid.svg';
 import { ReactComponent as AngleRightSolid } from '../../assets/icons/angle-right-solid.svg';
@@ -64,7 +65,7 @@ const SliderArrow = styled<React.FC<React.ComponentProps<typeof Icon> & { arrowD
 // This is the right sidebar component for the desktop layout
 // that contains the list of groups, steps, attributes and options.
 const DesktopRightSidebar = () => {
-	const { isSceneLoading, templates, currentTemplate, setCamera, setTemplate, draftCompositions } = useZakeke();
+	const { isSceneLoading, templates, currentTemplate, setCamera, setTemplate, draftCompositions, translations } = useZakeke();
 
 	const {
 		setSelectedGroupId,
@@ -97,8 +98,8 @@ const DesktopRightSidebar = () => {
 	const currentTemplateGroups = selectedStep
 		? selectedStep.templateGroups
 		: selectedGroup
-		? selectedGroup.templateGroups
-		: [];
+			? selectedGroup.templateGroups
+			: [];
 
 	const currentItems = [...currentAttributes, ...currentTemplateGroups].sort(
 		(a, b) => a.displayOrder - b.displayOrder
@@ -407,7 +408,15 @@ const DesktopRightSidebar = () => {
 
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [isStartRegistering]);
-	console.log("selectedAttribute", selectedAttribute)
+	const [isOpen, setIsOpen] = useState(false);
+
+	const toggleModal = () => setIsOpen(!isOpen);
+	const closeModal = (e: any) => {
+		if (e.target.id === "modal-overlay") {
+			setIsOpen(false);
+		}
+	};
+	console.log("selectedAttribute", currentItems)
 	return (
 		<DesktopRightSidebarContainer>
 			<GroupsContainer>
@@ -430,8 +439,8 @@ const DesktopRightSidebar = () => {
 													? savedCompositionsIcon
 													: group.imageUrl
 												: group.id === -2
-												? textIcon
-												: star
+													? textIcon
+													: star
 										}
 									/>
 									<span>{group.name ? T._d(group.name) : T._('Customize', 'Composer')}</span>
@@ -495,7 +504,30 @@ const DesktopRightSidebar = () => {
 														<ItemName key={item.name}>
 															{' '}
 															{T._d(item.name.toUpperCase())}{' '}
+
 														</ItemName>
+
+
+														{item.name === "SIZES" &&
+															<div className="tabs">
+																<a
+																	href="https://woodeex.com/blogs/guide_advice/knowing-my-finger-size"
+																	target="_blank"
+																	rel="noopener noreferrer"
+																	className=''
+																	style={{ display: 'block', minWidth: "400px" }}
+																>
+																	{translations?.dynamics?.get("how to know your finger size?") || "How to Know Your Finger Size?"}
+																</a>
+															</div>
+															}
+														{["QUALITY", "QUALITÉ", "איכות"].includes(item.name)  &&
+															<p className=""
+																style={{ display: 'block', minWidth: "300px" }}
+															>
+																GOOD QUALITY- VERY GOOD QUALITY - TOP QUALITY
+															</p>}
+
 														<OptionSelectedName>
 															{item.options.find((opt) => opt.selected)
 																? T._d(item.options.find((opt) => opt.selected)!.name)
@@ -515,10 +547,50 @@ const DesktopRightSidebar = () => {
 														<ItemName key={item.name}>
 															{T._d(item.name.toUpperCase())}
 														</ItemName>
+
 													</ItemContainer>
 												);
 										})}
 								</CarouselContainer>
+								{/* {isOpen && (
+									<div
+										id="modal-overlay"
+										onClick={closeModal}
+										style={{
+											position: "fixed",
+											top: 0, left: 0, width: "100%", height: "100%",
+											background: "rgba(0, 0, 0, 0.5)",
+											display: "flex", justifyContent: "center", alignItems: "center",
+											zIndex:"99"
+										}}
+									>
+										<div
+											style={{
+												position: "relative",
+												width: "80%", maxWidth: "800px", height: "500px",
+												background: "#fff", borderRadius: "10px", overflow: "hidden"
+											}}
+											onClick={(e) => e.stopPropagation()}
+										>
+											<button
+												onClick={toggleModal}
+												style={{
+													position: "absolute", top: "10px", right: "10px",
+													background: "red", color: "#fff", border: "none", padding: "5px 10px",
+													cursor: "pointer", borderRadius: "5px"
+												}}
+											>
+												Close
+											</button>
+
+											<iframe
+												src="https://woodeex.com/blogs/guide_advice/knowing-my-finger-size"
+												style={{ width: "100%", height: "100%", border: "none" }}
+											/>
+											
+										</div>
+									</div>
+								)} */}
 
 								{lastSelectedItem?.type === 'attribute' ? (
 									<>

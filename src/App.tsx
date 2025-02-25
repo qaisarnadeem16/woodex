@@ -239,13 +239,14 @@ function App() {
 							</a>
 						);
 					})}
-				</div>;
+				</div>
 
 			</div>
 			{isMobile ? <LayoutMobile /> : <LayoutDesktop />}
 			{(isLoading || isSceneLoading || isAssetsLoading) && <LoadingOverlay />}
 			{delayedLoading && <ProgressBarLoadingOverlay flagStartLoading={flagStartLoading} />}
 			{!isSceneLoading && <TryOnViewer />}
+			
 		</div>
 	);
 }
