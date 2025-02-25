@@ -239,7 +239,7 @@ function App() {
 							</a>
 						);
 					})}
-				</div>
+				</div>;
 
 			</div>
 			{isMobile ? <LayoutMobile /> : <LayoutDesktop />}

@@ -508,7 +508,10 @@ const DesktopRightSidebar = () => {
 														</ItemName>
 
 
-														{item.name === "SIZES" &&
+														{/* {item.name === "SIZES" && */}
+														{
+															["SIZES","מידות", "TAILLES"].includes(item.name) &&
+
 															<div className="tabs">
 																<a
 																	href="https://woodeex.com/blogs/guide_advice/knowing-my-finger-size"

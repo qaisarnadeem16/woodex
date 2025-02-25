@@ -25,7 +25,7 @@ export const MobileContainer = styled.div`
   position: relative;
   display:grid;
   grid-template-rows: 1fr auto auto;
-  height:80dvh;
+  height:100%;
   width:100%;
   overflow:hidden;
 `;
