@@ -114,9 +114,10 @@ const OptionItem: FC<{ selectedAttribute: Attribute | null | undefined, option: 
         {!option.attribute.hideOptionsLabel &&
             selectedAttribute &&
             // selectedAttribute.name !== "CARAT" &&
-            // !["QUALITY", "QUALITÉ", "איכות"].includes(selectedAttribute.name) && (
+            // !["QUALITY", "QUALITÉ", "איכות"].includes(selectedAttribute.name) &&
+             (
                 <OptionName>{T._d(option.name)}</OptionName>
-            // )}
+            )}
 
 
 
