@@ -520,7 +520,7 @@ const DesktopRightSidebar = () => {
 																	className=''
 																	style={{ display: 'block', minWidth: "400px" }}
 																>
-																	{translations?.dynamics?.get("how to know your finger size?") || "How to Know Your Finger Size?"}
+																		{T._d("how to know your finger size?") || "How to Know Your Finger Size?"}
 																</a>
 															</div>
 															}
