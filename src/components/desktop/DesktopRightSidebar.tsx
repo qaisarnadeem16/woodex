@@ -520,7 +520,7 @@ const DesktopRightSidebar = () => {
 																	className=''
 																	style={{ display: 'block', minWidth: "400px" }}
 																>
-																		{T._d("how to know your finger size?") || "How to Know Your Finger Size?"}
+																		{T._d("How to know your finger size?") || "How to Know Your Finger Size?"}
 																</a>
 															</div>
 															}
@@ -528,7 +528,7 @@ const DesktopRightSidebar = () => {
 															<p className=""
 																style={{ display: 'block', minWidth: "300px" }}
 															>
-																GOOD QUALITY- VERY GOOD QUALITY - TOP QUALITY
+																{T._d("GOOD QUALITY- VERY GOOD QUALITY - TOP QUALITY")}
 															</p>}
 
 														<OptionSelectedName>
