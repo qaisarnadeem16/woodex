@@ -527,7 +527,7 @@ const DesktopRightSidebar = () => {
 															}
 														{["QUALITY", "QUALITÉ", "איכות"].includes(item.name)  &&
 															<p className=""
-																style={{ display: 'block', minWidth: "300px" }}
+																style={{ display: 'block', minWidth: "350px" , fontSize:"18px" }}
 															>
 																{/* {T._d("GOOD QUALITY- VERY GOOD QUALITY - TOP QUALITY")} */}
 																{item.options.find((opt) => opt.selected)
