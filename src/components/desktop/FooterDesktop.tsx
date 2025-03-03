@@ -478,11 +478,11 @@ const FooterDesktop = () => {
 
 			</FooterContainer>
 			<div className="" style={{ display: "flex", gap: "0", alignItems: "center", justifyContent:"end", width: "100%", background: "#fff" }}>
-				<div className="" style={{width:"30%" }}>
+				<div className="" style={{width:"35%" }}>
 
-					<p className="">* {translations?.dynamics?.get("Prices are VAT excluded") || "Prices are VAT excluded"}</p>
-					<p className="">* {translations?.dynamics?.get("In the shopping cart, prices will be displayed in your currency excluded vat.") || "In the shopping cart, prices will be displayed in your currency excluded vat." }
-					</p>
+					<div className="" style={{fontSize:"20px" , margin:"5px  0"}}>* {translations?.dynamics?.get("Prices are VAT excluded") || "Prices are VAT excluded"}</div>
+					<div className="" style={{ fontSize: "20px" }}>* {translations?.dynamics?.get("In the shopping cart, prices will be displayed in your currency excluded vat.") || "In the shopping cart, prices will be displayed in your currency excluded vat." }
+					</div>
 				</div>
 			</div>
 		</>

@@ -518,9 +518,10 @@ const DesktopRightSidebar = () => {
 																	target="_blank"
 																	rel="noopener noreferrer"
 																	className=''
-																	style={{ display: 'block', minWidth: "400px" }}
+																		style={{ display: 'block', minWidth: "400px", color:"#269b88" }}
 																>
-																		{T._d("How to know your finger size?") || "How to Know Your Finger Size?"}
+																		https://woodeex.com/blogs/guide_advice/knowing-my-finger-size
+																		{/* {T._d("How to know your finger size?") || "How to Know Your Finger Size?"} */}
 																</a>
 															</div>
 															}
@@ -528,7 +529,10 @@ const DesktopRightSidebar = () => {
 															<p className=""
 																style={{ display: 'block', minWidth: "300px" }}
 															>
-																{T._d("GOOD QUALITY- VERY GOOD QUALITY - TOP QUALITY")}
+																{/* {T._d("GOOD QUALITY- VERY GOOD QUALITY - TOP QUALITY")} */}
+																{item.options.find((opt) => opt.selected)
+																	? T._d(item.options.find((opt) => opt.selected)!.description)
+																	: ''}
 															</p>}
 
 														<OptionSelectedName>

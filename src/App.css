@@ -10,9 +10,10 @@
 
 .box {
   z-index: 9999;
-  /* background: black; */
+  background: white;
   display: flex;
   justify-content: end;
+  padding: 5px;
 }
 
 .tabs {
