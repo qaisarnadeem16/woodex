@@ -261,6 +261,16 @@ const MobileMenu = () => {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [selectedGroup?.id, isSceneLoading]);
 
+
+	// Camera for attributes
+	useEffect(() => {
+		if (!isSceneLoading && selectedAttribute && selectedAttribute.cameraLocationId) {
+			setCamera(selectedAttribute.cameraLocationId);
+		}
+
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [selectedAttribute, !isSceneLoading]);
+
 	useEffect(() => {
 		if (selectedGroup && selectedGroup.steps.length > 0) {
 			if (

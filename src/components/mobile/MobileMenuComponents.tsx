@@ -14,8 +14,8 @@ export const MobileItemContainer = styled.div<{ selected?: boolean }>`
 	min-width: 140px;
 	max-width: 140px;
 	width: 140px;
-	height: 120px;
-	min-height: 120px;
+	height: 100px;
+	min-height: 100px;
 	max-height: 120px;
 	flex: 1;
 	display: flex;
@@ -27,8 +27,8 @@ export const MobileItemContainer = styled.div<{ selected?: boolean }>`
 
 // Styled component for the image of each menu item
 export const MenuItemImage = styled.img<{ isRound?: boolean }>`
-	width: 74px;
-	height: 74px;
+	width: 54px;
+	height: 54px;
 	object-fit: ${(props) => (props.isRound ? 'cover' : 'contain')};
 	margin-bottom: 20px;
 	border-radius: ${(props) => (props.isRound ? '64px!important' : '0')};

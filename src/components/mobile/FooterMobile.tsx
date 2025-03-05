@@ -424,7 +424,7 @@ const FooterMobile = () => {
 						</FooterMobileIcon>
 					)}
 
-					{isBuyVisibleForQuoteRule && !isViewerMode && (
+					{/* {isBuyVisibleForQuoteRule && !isViewerMode && ( */}
 						<FooterMobileIcon2
 							gridArea='cart'
 							isCart
@@ -455,7 +455,7 @@ const FooterMobile = () => {
 								(isDraftEditor || isEditorMode ? <SaveSolid /> : <CartSolid />)}
 							{isAddToCartLoading && <TailSpin color='#FFFFFF' height='25px' />}
 						</FooterMobileIcon2>
-					)}
+					{/* )} */}
 					{/* {product?.quoteRule && !isViewerMode && !isDraftEditor && !isEditorMode && (
 						<FooterMobileIcon
 							gridArea='quote'

@@ -503,7 +503,7 @@ export const QuantityContainer = styled.div`
 `;
 
 export const FooterMobileContainer = styled.div<{ isQuoteEnable?: boolean }>`
-	height: 70px;
+	height: 60px;
 	display: flex;
 	justify-content: space-between;
 	gap: 2px;
