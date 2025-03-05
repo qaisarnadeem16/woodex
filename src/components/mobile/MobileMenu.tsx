@@ -261,7 +261,14 @@ const MobileMenu = () => {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [selectedGroup?.id, isSceneLoading]);
 
+	useEffect(() => {
+		if ( actualGroups[1]?.cameraLocationId) {
+			setCamera(actualGroups[1].cameraLocationId);
+			// console.log(actualGroups[1].cameraLocationId)
+		}
 
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [actualGroups]);
 	// Camera for attributes
 	useEffect(() => {
 		if (!isSceneLoading && selectedAttribute && selectedAttribute.cameraLocationId) {
@@ -294,7 +301,7 @@ const MobileMenu = () => {
 
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [isStartRegistering]);
-
+	// console.log('actualGroups', actualGroups)
 	return (
 		<MobileMenuContainer>
 			{sellerSettings && sellerSettings.priceInfoText && (
