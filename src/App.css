@@ -55,15 +55,24 @@
 
 @media (max-width: 1000px) {
 .tabs a {
-    padding: .5rem;
+    padding: .4rem;
     margin: 0;
     font-size: .9rem;
     text-decoration: none;
     color: black;
   }
+    .tabs a.active {
+      color: black;
+      /* Change to your preferred active color */
+      /* font-weight: bold; */
+      font-size: 1rem;
+      /* Optional: make the active link bold */
+      border-bottom: 2px solid #269b88;
+      /* Optional: add a bottom border */
+    }
   /* Adjust the breakpoint as needed */
   .tabs {
-    padding: 1rem;
+    padding: .3rem;
     width: 100%;
   }
 }

@@ -416,7 +416,7 @@ const DesktopRightSidebar = () => {
 			setIsOpen(false);
 		}
 	};
-	console.log("selectedAttribute", currentItems)
+	// console.log("selectedAttribute", currentItems)
 	return (
 		<DesktopRightSidebarContainer>
 			<GroupsContainer>
@@ -518,10 +518,10 @@ const DesktopRightSidebar = () => {
 																	target="_blank"
 																	rel="noopener noreferrer"
 																	className=''
-																		style={{ display: 'block', minWidth: "400px", color:"#269b88" }}
+																		style={{ display: 'block', minWidth: "400px", color:"#269b88", fontSize:"18px" }}
 																>
-																		https://woodeex.com/blogs/guide_advice/knowing-my-finger-size
-																		{/* {T._d("How to know your finger size?") || "How to Know Your Finger Size?"} */}
+																		{/* https://woodeex.com/blogs/guide_advice/knowing-my-finger-size */}
+																		{T._d("How to know your finger size?") }
 																</a>
 															</div>
 															}
