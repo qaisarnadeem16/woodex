@@ -22,9 +22,12 @@ const InfoIcon = styled.img<{ $isMobile?: boolean }>`
 `;
 
 const OptionTooltipContent = styled.div`
-	max-width: 200px;
-	padding: 5px;
+  max-width: 200px;
+  padding: 5px;
+  position: relative; /* Ensure it's positioned */
+  z-index: 9999; /* High value to stay on top */
 `;
+
 
 const Tooltip: FC<TooltipProps> = ({ optionDescription: text, $isMobile: isMobile }) => {
 	const [open, close, isOpened, Dropdown] = useDropdown();
