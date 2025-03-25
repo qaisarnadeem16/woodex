@@ -6,6 +6,7 @@ import styled, { css } from 'styled-components';
 import { ReactComponent as ArrowLeftIcon } from '../../assets/icons/arrow-left-solid.svg';
 import { ReactComponent as ArrowRightIcon } from '../../assets/icons/arrow-right-solid.svg';
 import noImage from '../../assets/images/no_image.png';
+import { T } from 'Helpers';
 
 // Styled component for the container of each mobile menu item
 export const MobileItemContainer = styled.div<{ selected?: boolean }>`
@@ -251,7 +252,7 @@ export const MenuItem: FC<MenuItemProps> = (props) => {
 	return (
 		<MobileItemContainer onClick={props.onClick} selected={props.selected}>
 			{props.description && props.description.length !== 0 && (
-				<Tooltip optionDescription={props.description} $isMobile />
+				<Tooltip optionDescription={T._d(props.description)} $isMobile />
 			)}
 			{props.imageUrl && (
 				<MenuItemImage isRound={props.isRound} src={props.imageUrl} alt={props.label} loading='lazy' />
