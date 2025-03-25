@@ -104,7 +104,7 @@ const OptionItem: FC<{ selectedAttribute: Attribute | null | undefined, option: 
 
         <OptionIconContainer>
             {option.description && option.description.length !== 0 &&
-                <Tooltip key={"tooltip" + option.guid} optionDescription={option.description} />
+                <Tooltip key={"tooltip" + option.guid} optionDescription={T._d(option.description)} />
             }
             {option.imageUrl && <OptIconContainer><OptionIcon loading="lazy"
                 // fetchpriority="low" 
