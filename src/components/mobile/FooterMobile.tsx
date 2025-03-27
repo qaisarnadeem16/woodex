@@ -393,7 +393,7 @@ const FooterMobile = () => {
 				<FooterMobileContainer isQuoteEnable={product?.quoteRule !== null}>
 					<FooterMobileIcon gridArea='back' isHidden={selectedGroupId === null} onClick={handleBackClick}>
 						{/* <AngleLeftSolid /> */}
-						Back
+						{T._d("Back")}
 					</FooterMobileIcon>
 
 					{
