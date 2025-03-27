@@ -274,7 +274,7 @@ export const MenuItem: FC<MenuItemProps> = (props) => {
 					))}
 				</MenuItemImagesWrapper>
 			)}
-			{!props.hideLabel && <MenuItemLabel>{props.label}</MenuItemLabel>}
+			{!props.hideLabel && <MenuItemLabel>{T._d(props.label)}</MenuItemLabel>}
 		</MobileItemContainer>
 	);
 };
